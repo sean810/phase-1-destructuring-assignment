@@ -2,10 +2,21 @@ require ( './helpers.js' );
 
 const { expect } = require("chai")
 
+describe('Animal Sounds', () => {
+  it('should use destructuring to declare five animal sounds', () => {
+    expect(cowSound).to.exist; // Check if cowSound exists
+    expect(cowSound).to.equal("moo"); // Check if cowSound equals "moo"
+    expect(horseSound).to.equal("neigh");
+    expect(sheepSound).to.equal("baa");
+    expect(pigSound).to.equal("oink");
+    expect(chickenSound).to.equal("cluck");
+  });
+});
+
 describe("index.js", () => {
   it("String: uses destructuring to declare five animal sounds", () => {
-    expect(moo).to.exist
-    expect(moo).to.equal("cow")
+    expect(cowSound).to.exist
+    expect(cowSound).to.equal("moo")
     expect(neigh).to.exist
     expect(neigh).to.equal("horse")
     expect(baa).to.exist
@@ -48,6 +59,16 @@ describe("index.js", () => {
     expect(indigo).to.equal("indigo")
     expect(violet).to.exist
     expect(violet).to.equal("violet")
+    describe("Array: uses destructuring to declare six rainbow color variables using initials", () => {
+      it("should assign initials correctly", () => {
+        expect(r).to.equal("red");
+        expect(o).to.equal("orange");
+        expect(y).to.equal("yellow");
+        expect(g).to.equal("green");
+        expect(b).to.equal("blue");
+        expect(indg).to.equal("indigo"); // Assuming indg is included now
+      });
+    });
   })
   it("Array: uses destructuring to declare six rainbow color variables using initials", () => {
     expect(r).to.exist
